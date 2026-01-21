@@ -5,6 +5,9 @@
 <title>Gesso PPR | Placas 3D Premium</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- FONTES -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
 <!-- ANIMAÇÕES -->
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
@@ -13,23 +16,23 @@
   --bg:#ffffff;
   --text:#111;
   --primary:#ff9800;
-  --dark:#000;
   --card:#f3f3f3;
+  --hover:#ffb74d;
 }
 [data-theme="dark"]{
-  --bg:#0e0e0e;
+  --bg:#121212;
   --text:#f2f2f2;
-  --card:#1a1a1a;
+  --card:#1e1e1e;
+  --hover:#ffb74d;
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto', sans-serif;}
 body{background:var(--bg);color:var(--text);transition:.3s}
-a{text-decoration:none}
+a{text-decoration:none;color:inherit}
 
 /* HEADER */
 header{
   min-height:100vh;
-  background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-  url("https://images.unsplash.com/photo-1618220179428-22790b461013");
+  background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)), url("https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1950&q=80");
   background-size:cover;
   background-position:center;
   display:flex;
@@ -39,7 +42,7 @@ header{
   color:#fff;
   padding:20px;
 }
-header h1{font-size:55px}
+header h1{font-family:'Montserrat', sans-serif;font-size:55px}
 header p{font-size:22px;margin:20px 0}
 .btn{
   background:var(--primary);
@@ -47,6 +50,11 @@ header p{font-size:22px;margin:20px 0}
   padding:16px 32px;
   border-radius:30px;
   font-weight:bold;
+  transition:.3s;
+}
+.btn:hover{
+  background:var(--hover);
+  transform:translateY(-3px);
 }
 
 /* TOGGLE */
@@ -59,11 +67,14 @@ header p{font-size:22px;margin:20px 0}
   border-radius:30px;
   cursor:pointer;
   z-index:999;
+  font-weight:bold;
+  transition:.3s;
 }
+.toggle:hover{background:var(--hover);color:#000}
 
 /* SECTIONS */
 section{padding:90px 20px;max-width:1200px;margin:auto}
-h2{text-align:center;font-size:38px;margin-bottom:50px;color:var(--primary)}
+h2{text-align:center;font-size:38px;margin-bottom:50px;color:var(--primary);font-family:'Montserrat', sans-serif;}
 
 .grid{
   display:grid;
@@ -75,7 +86,9 @@ h2{text-align:center;font-size:38px;margin-bottom:50px;color:var(--primary)}
   background:var(--card);
   padding:30px;
   border-radius:20px;
+  transition:.3s;
 }
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,.2);}
 .card img{
   width:100%;
   height:200px;
@@ -90,7 +103,9 @@ h2{text-align:center;font-size:38px;margin-bottom:50px;color:var(--primary)}
   height:240px;
   object-fit:cover;
   border-radius:20px;
+  transition:.3s;
 }
+.portfolio img:hover{transform:scale(1.05);}
 
 /* PREÇOS */
 .price{
@@ -105,7 +120,11 @@ details{
   padding:20px;
   border-radius:15px;
   margin-bottom:15px;
+  cursor:pointer;
+  transition:.3s;
 }
+details:hover{transform:translateY(-3px);box-shadow:0 5px 15px rgba(0,0,0,.1);}
+summary{font-weight:bold; font-size:18px;}
 
 /* FOOTER */
 footer{
@@ -125,6 +144,9 @@ footer{
   padding:18px;
   border-radius:50%;
   font-size:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 </style>
 </head>
@@ -144,8 +166,7 @@ footer{
 <section data-aos="fade-up">
   <h2>Sobre a Empresa</h2>
   <p style="max-width:800px;margin:auto;text-align:center;font-size:18px">
-    Somos especialistas em placas 3D de gesso decorativo, focados em acabamento,
-    durabilidade e impacto visual. Trabalhamos com projetos residenciais e comerciais.
+    Somos apaixonados por transformar ambientes! Criamos placas 3D de gesso de alta qualidade para deixar sua casa ou empresa com um visual moderno e elegante.
   </p>
 </section>
 
@@ -153,19 +174,19 @@ footer{
   <h2>Nossos Serviços</h2>
   <div class="grid">
     <div class="card" data-aos="fade-right">
-      <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69">
-      <h3>Placas 3D</h3>
-      <p>Modelos modernos e exclusivos.</p>
+      <img src="https://images.unsplash.com/photo-1580582621959-48d27397dc69?auto=format&fit=crop&w=800&q=80">
+      <h3>Placas 3D Personalizadas</h3>
+      <p>Modelos exclusivos que se adaptam ao seu espaço, trazendo sofisticação e originalidade.</p>
     </div>
     <div class="card" data-aos="fade-up">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80">
       <h3>Instalação Profissional</h3>
-      <p>Equipe experiente e acabamento fino.</p>
+      <p>Nossa equipe garante acabamento perfeito, rápido e seguro, sem sujeira ou complicação.</p>
     </div>
     <div class="card" data-aos="fade-left">
-      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+      <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=800&q=80">
       <h3>Projetos Sob Medida</h3>
-      <p>Personalização completa.</p>
+      <p>Atendemos desde pequenas reformas até grandes ambientes comerciais, tudo personalizado.</p>
     </div>
   </div>
 </section>
@@ -173,9 +194,9 @@ footer{
 <section>
   <h2>Portfólio</h2>
   <div class="grid portfolio">
-    <img src="https://images.unsplash.com/photo-1615529328331-f8917597711f" data-aos="zoom-in">
-    <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c" data-aos="zoom-in">
-    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab" data-aos="zoom-in">
+    <img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?auto=format&fit=crop&w=800&q=80" data-aos="zoom-in">
+    <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=800&q=80" data-aos="zoom-in">
+    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=800&q=80" data-aos="zoom-in">
   </div>
 </section>
 
@@ -185,17 +206,17 @@ footer{
     <div class="card">
       <h3>Básico</h3>
       <p class="price">Sob consulta</p>
-      <p>Ambientes pequenos</p>
+      <p>Ambientes pequenos ou simples.</p>
     </div>
     <div class="card">
       <h3>Profissional</h3>
       <p class="price">Sob consulta</p>
-      <p>Residencial completo</p>
+      <p>Residências completas e ambientes médios.</p>
     </div>
     <div class="card">
       <h3>Premium</h3>
       <p class="price">Sob consulta</p>
-      <p>Projetos comerciais</p>
+      <p>Projetos comerciais ou grandes ambientes personalizados.</p>
     </div>
   </div>
 </section>
@@ -204,11 +225,19 @@ footer{
   <h2>Dúvidas Frequentes</h2>
   <details>
     <summary>As placas são resistentes?</summary>
-    <p>Sim, material de alta qualidade e durabilidade.</p>
+    <p>Sim! Usamos gesso de alta qualidade que dura anos sem quebrar ou deformar.</p>
   </details>
   <details>
-    <summary>Vocês fazem instalação?</summary>
-    <p>Sim, instalação profissional inclusa.</p>
+    <summary>Vocês fazem a instalação?</summary>
+    <p>Com certeza! Nossa equipe instala tudo rapidamente e com acabamento impecável.</p>
+  </details>
+  <details>
+    <summary>Posso escolher a cor e o modelo?</summary>
+    <p>Sim! Temos várias opções de modelos e cores, ou podemos criar algo totalmente exclusivo para você.</p>
+  </details>
+  <details>
+    <summary>Quanto tempo leva um projeto?</summary>
+    <p>Depende do tamanho, mas geralmente entre 2 a 7 dias para ambientes residenciais.</p>
   </details>
 </section>
 
